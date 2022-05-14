@@ -60,7 +60,7 @@ def contact():
             connection.login("georgepavlej@gmail.com", "Avensis13570530!")
             connection.sendmail(
                 from_addr="georgepavlej@gmail.com",
-                to_addrs="georgepavlej@gmail.com",
+                to_addrs=f"{form.email.data}",
                 msg=f"Subject:Question\n\n"
                     f"Name: {form.name.data}\n\n"
                     f"Phone number: {form.phone_number.data}\n\n"

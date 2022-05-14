@@ -5,7 +5,6 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_gravatar import Gravatar
 from os import path
-import os
 
 
 db = SQLAlchemy()
@@ -19,14 +18,8 @@ def create_app():
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
-    EMAIL = os.environ.get("EMAIL")
-    PASSWORD = os.environ.get("PASSWORD")
-
     from .views import views
     from .auth import auth
-
-    EMAIL = os.environ.get("EMAIL")
-    PASSWORD = os.environ.get("PASSWORD")
 
     app.register_blueprint(views, url_prefix="/")
     app.register_blueprint(auth, url_prefix="/")
@@ -41,9 +34,6 @@ def create_app():
                         use_ssl=False, base_url=None)
 
     create_database(app)
-
-    EMAIL = os.environ.get("EMAIL")
-    PASSWORD = os.environ.get("PASSWORD")
 
     login_manager = LoginManager()
     login_manager.init_app(app)
