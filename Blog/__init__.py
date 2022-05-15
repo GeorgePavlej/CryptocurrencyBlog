@@ -5,6 +5,7 @@ from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from flask_gravatar import Gravatar
 from os import path
+import os
 
 
 db = SQLAlchemy()
@@ -13,8 +14,8 @@ DB_NAME = "blog.db"
 
 def create_app():
     app = Flask(__name__)
-    app.config["SECRET_KEY"] = "kfjruv5d7931!sdwwwfhb2%"
-    app.config['SQLALCHEMY_DATABASE_URI'] = f'sqlite:///{DB_NAME}'
+    app.config["SECRET_KEY"] = os.environ.get("SECRET_KEY")
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.environ.get("DATABASE_URL")
     app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
     db.init_app(app)
 
