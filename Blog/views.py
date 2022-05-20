@@ -57,9 +57,9 @@ def contact():
     if form.validate_on_submit():
         with smtplib.SMTP("smtp.gmail.com") as connection:
             connection.starttls()
-            connection.login("georgepavlej@gmail.com", "Avensis13570530!")
+            connection.login(EMAIL, PASSWORD)
             connection.sendmail(
-                from_addr="georgepavlej@gmail.com",
+                from_addr=EMAIL,
                 to_addrs=f"{form.email.data}",
                 msg=f"Subject:Question\n\n"
                     f"Name: {form.name.data}\n\n"
