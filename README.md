@@ -11,11 +11,11 @@ A Web Application that allows users to create, edit and comment posts. Written i
 
 # Table of Contents
 
-- Introduction
-- Features
-- How it Works
-- Credits
-- Screenshots
+- [Introduction](https://github.com/Gyorgy1988/CryptocurrencyBlog/edit/main/README.md#introduction)
+- [Features](https://github.com/Gyorgy1988/CryptocurrencyBlog/edit/main/README.md#features)
+- [How it Works](https://github.com/Gyorgy1988/CryptocurrencyBlog/edit/main/README.md#how-it-works)
+- [Credits](https://github.com/Gyorgy1988/CryptocurrencyBlog/edit/main/README.md#credits)
+- [Screenshots](https://github.com/Gyorgy1988/CryptocurrencyBlog/edit/main/README.md#screenshots)
 
 # Introduction
 
